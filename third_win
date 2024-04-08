@@ -1,0 +1,41 @@
+from PyQt5.QtCore import Qt, QTimer, QTime, QLocale
+from PyQt5.QtGui import QDoubleValidator, QIntValidator, QFont # checking the types of input values
+from PyQt5.QtWidgets import (
+       QApplication, QWidget,
+       QHBoxLayout, QVBoxLayout, QGridLayout,
+       QGroupBox, QRadioButton,
+       QPushButton, QLabel, QListWidget, QLineEdit)
+
+from instr import *
+from second_win import *
+from first_win import *
+
+class FinalWin(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.set_appear()
+        self.initUI()
+
+        self.show()
+
+class FinalWin(QWidget):
+    def set_appear(self):
+        pass
+    def initUI(self):
+        pass
+
+class FinalWin(QWidget):
+    def set_appear(self):
+        finalWin = QWidget()
+        finalWin.setWindowTitle('Mini test')
+        finalWin.move(900, 70)
+        finalWin.resize(500, 500)
+
+class FinalWin(QWidget):
+    def initUI(self):
+        text1 = QLabel('Roufier Index: 0')
+        text2 = QLabel('Cardiac performance: there is no data for this age')
+        self.l_line = QVBoxLayout()
+        self.l_line.addWidget(self.text1)
+        self.l_line.addWidget(self.text2)
+        self.setLayout(self.l_line)
