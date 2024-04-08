@@ -1,0 +1,87 @@
+from PyQt5.QtCore import Qt, QTimer, QTime, QLocale
+from PyQt5.QtGui import QDoubleValidator, QIntValidator, QFont # checking the types of input values
+from PyQt5.QtWidgets import (
+       QApplication, QWidget,
+       QHBoxLayout, QVBoxLayout, QGridLayout,
+       QGroupBox, QRadioButton,
+       QPushButton, QLabel, QListWidget, QLineEdit)
+
+from instr import *
+from second_win import *
+from first_win import *
+
+class TestWin(QWidget):
+       def __init__(self):
+              super() .__init__()
+              self.set_appear()
+              self.initUI()
+              self.connects()
+              self.show()
+
+class TestWin(QWidget):
+       def set_appear(self):
+              pass
+       def initUI(self):
+              pass
+       def connects(self):
+              pass
+
+class TestWin(QWidget):
+       def set_appear(self):
+              secWin = QWidget()
+              secWin.setWindowTitle('Mini test')
+              secWin.move(900, 70)
+              secWin.resize(500, 500)
+
+class TestWin(QWidget):
+        text1 = QLabel("Enter Your full name:")
+        text2 = QLabel("Full years:")
+        text3 = QLabel('Lie on your back and take your pulse for 15 seconds. Click the "Start first test" button to start the timer.'
+                       'Write down the result in the appropriate field.')
+        text4 = QLabel('Perform 30 squats in 45 seconds. To do this, click "start doing squats" button '
+                       'to start the squat counter.')
+        text5 = QLabel('Lie on your back and take your pulse for the first 15 seconds of the minute, then for the last 15 seconds of the minute.'
+                       'Press the "Start final test" button to start the timer.'
+                       'The seconds that should be measured are indicated in green and the minutes that should not be measured are indicated in black. Write down the results in the appropriate fields.')
+        button1 = QPushButton("Start the first test")
+        button2 = QPushButton("Start doing squats")
+        button3 = QPushButton("Start the final test")
+        button4 = QPushButton("Show the result")
+        time = QLabel("00:00:09")
+        qline1 = QLineEdit("Full name")
+        qline2 = QLineEdit("0")
+        qline3 = QLineEdit("0")
+        qline4 = QLineEdit("0")
+        qline5 = QLineEdit("0")
+
+       def initUI(self):
+              self.h_line = QHBoxLayout()
+              self.r_line = QVBoxLayout()
+              self.l_line = QVBoxLayout()
+              self.l_line.addWidget(self.text1)
+              self.l_line.addWidget(self.qline1)
+              self.l_line.addWidget(self.text2)
+              self.l_line.addWidget(self.qline2)
+              self.l_line.addWidget(self.text3)
+              self.l_line.addWidget(self.button1)
+              self.l_line.addWidget(self.qline3)
+              self.l_line.addWidget(self.text4)
+              self.l_line.addWidget(self.button2)
+              self.l_line.addWidget(self.text5)
+              self.l_line.addWidget(self.button3)
+              self.l_line.addWidget(self.qline4)
+              self.l_line.addWidget(self.qline5)
+              self.r_line.addWidget(self.time)
+              self.h_line.addWidget(self.button4)
+              self.h_line.addLayout(self.l_line)
+              self.h_line.addLayout(self.r_line)
+              self.setLayout(self.h_line)
+
+class TestWin(QWidget):
+       def connects(self):
+
+
+
+
+
+
